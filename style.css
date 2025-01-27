@@ -1,0 +1,291 @@
+@font-face {
+    font-family: gamingFont;
+    src: url('fonts/SuperPixel-m2L8j.ttf');
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: gamingFont;
+}
+
+:root {
+    --lightColor: #0d2f35;
+    --backgroundColor: #3d5d64;
+    --textColor: white;
+    --navHoverColor: #fe8e3c; 
+  }
+
+/* All pages */
+
+    /* -- Nav bar -- */
+.navbar {
+    background-color: var(--backgroundColor);
+}
+
+.nav-link {
+    color: #F5F3F5;
+}
+
+.nav-link:hover {
+    color: var(--navHoverColor);
+}
+
+.logo {
+    width: 8vh; 
+    height: 8vh;
+}
+
+.swith-button {
+    background-color: var(--lightColor);
+    color: white;
+}
+
+.swith-button:hover{
+    color: (--lightColor);
+}
+    /* -- End nav bar -- */
+
+    /* -- Footer -- */
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    text-align: center;
+}
+
+footer copyright {
+    font-family: 'Times New Roman', Times, serif;
+}
+    /* -- End footer -- */   
+
+body {
+    background-color: #0d2f35;
+}
+
+/* ---------------------------- */
+
+/* Index */
+
+.container {
+    margin-top: 5vh;
+}
+
+model-viewer{
+    width: 100%;
+    height: 70vh;
+}
+
+.my-photo {
+    height: 25vh;
+    border-radius: 25px;
+}
+
+.about-me {
+    color: var(--textColor);
+}
+
+.button {
+    backface-visibility: hidden;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    background: linear-gradient(90deg,#c56a29 0%,#c56a29 20.343056921228012%,#fe8e3c 20.343056921228012%,#fe8e3c 100%);
+    border-radius: 5px;
+    border: 0px solid #444444;
+    border-width: 0px 0px 0px 0px;
+    padding: 10px 24px 10px 50px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: arial;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.button > div {
+    color: #999999;
+    font-size: 10px;
+    font-weight: initial;
+    font-style: normal;
+    text-align: center;
+}
+
+.button > i {
+    color: #000000;
+    font-size: 1em;
+    background: #ffffff;
+    border-radius: 88px;
+    border: 0px solid #6ec286;
+    border-width: 0px 0px 0px 0px;
+    padding: 4px 4px 4px 4px;
+    position: absolute;
+    top: 9px;
+    left: 17px;
+    width: 24px;
+    height: 24px
+}
+
+.button > .ld {
+    font-size: initial
+}
+
+.button > a {
+    color: white;
+}
+
+@media only screen and (max-width: 1345px) {
+    .mg {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1250px) {
+    .revere-img {
+        display: none;
+    }
+
+    .revere {
+        justify-content: center;
+    }
+}
+
+/* ---------------------------- */
+
+/* Gallery */
+
+.slider {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16 / 9; 
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; 
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+}
+.slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.navigation button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.slider-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: white;
+}
+
+@media only screen and (max-width: 300px) {
+    .slider-indicators {
+        display: none;
+    }
+}
+
+/* ---------------------------- */
+
+/* About me */
+
+.aboutme-info {
+    color: white;
+}
+
+.aboutme-info p, .aboutme-info strong,  .aboutme-info a, .aboutme-info h2, .aboutme-info i {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutme-info a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------------------- */
+
+/* Contact */
+
+.contact-me {
+    color: white;
+}
+
+.contact-me p, .contact-me strong, .contact-me a, .contact-me h2, .contact-me i {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: white;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ---------------------------- */
